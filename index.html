@@ -20,9 +20,8 @@
                         <input type="checkbox" id="themeToggle" class="theme-toggle">
                         <span class="slider"></span>
                     </label>
-                </div>
-                <div class="menu-item">
-                    <button onclick="window.print()" class="print-btn">Print CV</button>
+                </div>                <div class="menu-item">
+                    <button onclick="printCV()" class="print-btn">Print CV</button>
                 </div>
                 <div class="menu-item">
                     <button onclick="downloadPDF()" class="download-btn">Download PDF</button>
@@ -533,13 +532,34 @@
               
               console.log('Resume loaded successfully with theme support');
           });
-          
-          // PDF download functionality (placeholder)
+            // PDF download functionality (placeholder)
           function downloadPDF() {
+              // Close hamburger menu before printing
+              closeHamburgerMenu();
+              
               // For now, this will just print the page
               // In a real implementation, you could use libraries like jsPDF or html2pdf
               alert('PDF download feature coming soon! For now, use Print and save as PDF.');
               window.print();
+          }
+          
+          // Function to close hamburger menu
+          function closeHamburgerMenu() {
+              const hamburgerBtn = document.getElementById('hamburgerBtn');
+              const menuDropdown = document.getElementById('menuDropdown');
+              
+              hamburgerBtn.classList.remove('active');
+              menuDropdown.classList.remove('active');
+          }
+          
+          // Custom print function that handles theme and menu closing
+          function printCV() {
+              closeHamburgerMenu();
+              
+              // Small delay to ensure menu is closed before printing
+              setTimeout(() => {
+                  window.print();
+              }, 100);
           }
        </script>
     </body>
