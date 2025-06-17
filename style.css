@@ -661,6 +661,15 @@ hr {
         margin-bottom: 15px;
         padding: 15px;
     }
+    
+    /* Hide hamburger menu and any interactive elements in print */
+    .hamburger-menu {
+        display: none !important;
+    }
+    
+    .print-btn, .download-btn {
+        display: none !important;
+    }
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
