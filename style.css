@@ -1,492 +1,1238 @@
-<!DOCTYPE html>
-<html lang="en">    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Musa Makaphela - Software Developer Resume</title>
-        <link rel="stylesheet" href="./style.css">
-        <script defer src="index.js"></script>
-    </head>
-    <body>
-        <!-- Hamburger Menu -->
-        <div class="hamburger-menu">
-            <button class="hamburger-btn" id="hamburgerBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="menu-dropdown" id="menuDropdown">
-                <div class="menu-item">
-                    <label for="themeToggle" class="theme-label">
-                        <span>Dark Theme</span>
-                        <input type="checkbox" id="themeToggle" class="theme-toggle">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="menu-item">
-                    <button class="print-btn">Print CV</button>
-                </div>
-                <div class="menu-item">
-                    <button class="download-btn">Download PDF</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="header">
-                <div class="header-intro">
-                    <img src="./assets/images/musa.jpg" height="150px" alt="Musa Makaphela" />
-                    <h1>Musa Makaphela</h1>
-                    <p>Software Developer | Full-Stack Engineer</p>
-                </div>
-                <div class="awards-header">
-                    <h2>Awards and Achievements</h2>
-                    <ul>
-                        <li><strong>Promotion from Programmer II to Programmer III</strong> - Recognition of professional growth and technical excellence</li>
-                        <li><strong>QA Script and SSIS Reviews</strong> - DMC Quality Assurance Excellence</li>
-                        <li><strong>1st Place - Imagine Cup Competition 2010</strong> - Development Category</li>
-                        <li><strong>Student Merit Award</strong> - Project Excellence (2010)</li>
-                        <li><strong>Social Awareness Award</strong> - Project Impact (2010)</li>
-                        <li><strong>Student Merit Bursary Award</strong> - Academic Performance (2008)</li>
-                        <li><strong>Crew Member of the Month</strong> - McDonald's (August 2007)</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="section">
-                <div class="summary">
-                    <h3>Professional Summary</h3>
-                    <p>Experienced software developer with industry expertise in both front-end and back-end development. Specialized in developing cutting-edge software solutions using the latest tools and frameworks. Down-to-earth professional with a strong willingness to learn and share knowledge with team members.</p>
-                </div>
-                  <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Email:</strong> 
-                        <span>musa.makaphela@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone:</strong> 
-                        <span>+27 71 457 6313</span>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Location:</strong> 
-                        <span>Cape Town, South Africa</span>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Skype:</strong> 
-                        <span>MusaMakaphela</span>
-                    </div>
-                </div>
-            </div>            
-            <div class="section">
-                <h2>Personal Information</h2>
-                <table>
-                    <tr><td>Full Name:</td><td>Musa Makaphela</td></tr>
-                    <tr><td>Date of Birth:</td><td>October 22, 1985</td></tr>
-                    <tr><td>Nationality:</td><td>South African</td></tr>
-                    <tr><td>Gender:</td><td>Male</td></tr>
-                    <tr><td>Marital Status:</td><td>Single</td></tr>
-                    <tr><td>Driving License:</td><td>Code B</td></tr>
-                    <tr><td>Dependants:</td><td>2</td></tr>
-                    <tr><td>Home Language:</td><td>Xhosa</td></tr>
-                    <tr><td>Languages:</td><td>English (Fluent), Xhosa (Native)</td></tr>
-                    <tr><td>Address:</td><td>Unit 08 Towerkop, Mooiberge Estate<br>Haasendal Street, Kuils River<br>Cape Town, 7580<br>South Africa</td></tr>
-                </table>
-            </div>            
-            <div class="section">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <h3>Nelson Mandela Metropolitan University</h3>
-                    <h4>BTech Information Technology: Software Development</h4>
-                    <div class="date">2011</div>
-                    <ul>
-                        <li>Research Methodology</li>
-                        <li>Information and Technology Management IV</li>
-                        <li>User Interfaces IV</li>
-                        <li>Information Security IV</li>
-                        <li>Development Software IV</li>
-                        <li>Advanced Development Software IV</li>
-                        <li>Operating Systems IV</li>
-                        <li>Project IV</li>
-                        <li>Knowledge Management IV</li>
-                    </ul>
-                </div>
+/* CSS Animations and Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                <div class="education-item">
-                    <h3>Nelson Mandela Metropolitan University</h3>
-                    <h4>NDip Information Technology: Software Development</h4>
-                    <div class="date">2006 - 2010</div>
-                    <ul>
-                        <li>C# III</li>
-                        <li>Project Management (Module C)</li>
-                        <li>Advanced Design B (Module B)</li>
-                        <li>Development Software III</li>
-                        <li>Technical Programming II</li>
-                        <li>Information Systems III</li>
-                        <li>System Analysis and Design (Module A)</li>
-                        <li>System Software II</li>
-                    </ul>
-                </div>
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-                <div class="education-item">
-                    <h3>Douglas Mbopa Secondary School</h3>
-                    <h4>Matriculation Certificate</h4>
-                    <div class="date">2005</div>
-                    <ul>
-                        <li>Xhosa, English, Mathematics</li>
-                        <li>Biology, Geography, Physical Science</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section">
-                <h2>Work Experience</h2>
-                <div class="experience-item">
-                    <h3>Shoprite Group of Companies</h3>
-                    <h4>Programmer III</h4>
-                    <div class="date">April 2024 - Current</div>
-                    <p><strong><i>Breakdown of Roles played at Shoprite Group of Companies:</i></strong></p>
-                    <table>
-                        <tr>
-                            <td><strong>Division</strong></td>
-                            <td>IT eBanking</td>
-                        </tr>
-                        <tr>
-                            <td>Responsibilities</td>
-                            <td>1. to develop operational systems in accordance with Shoprite Standards<br />                            
-                            -Understand the existing requirement and document the requirements<br />
-                            -Develop .Net programs and functions.<br />
-                            -Confirm with requirements with Systems Analyst<br />
-                            -Do unit testing of developed programs and functions<br />
-                            -Code reviews with peers<br /><br />
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-                            2. to maintain operational systems in accordance with Shoprite Standards<br />
-                            -Maintain existing Net programs/systems and functions<br />
-                            -Document changes<br />
-                            -Confirm requirements with Systems Analyst<br />
-                            -Do unit testing of developed programs and functions<br />
-                            -Code reviews with peers<br /><br />
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                            3. to manage the release process<br />
-                            -Capture the release using the Shoprite release management system.<br />
-                            -Ensure instructions are clear and concise and applied by relevant deployment teams<br />
-                            -Confirm the success of the deployment and follow through until production stage is reached<br /><br />
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-                            4. To provide support to users of the systems.<br />
-                            -Provide business support on existing systems<br />
-                            - Supporting and Co-operating<br />
-                            -Working with People<br />
-                            - Adhering to Principles and Values<br /></td>
-                        </tr>
-                        <tr><td>Development Tools</td><td>C# .NET(Visual Studio 2022), ASP.NET Core RazorPages ,ASP.NET WebForms, Entity Framework,Javascript,HTML5,CSS, ASP.NET Core Web API ,MS SQL SERVER (2018), SSIS Packages, Git, Jira, Azure DevOps</td></tr>
-                    </table>
-                </div>
-                
-                <div class="experience-item">
-                    <h3>Shoprite Group of Companies</h3>
-                    <h4>Programmer II</h4>
-                    <div class="date">September 2019 - March 2024</div>
-                    <p><strong><i>Breakdown of Roles played at Shoprite Group of Companies:</i></strong></p>
-                    <table>
-                        <tr>
-                            <td><strong>Division</strong></td>
-                            <td>IT eBanking</td>
-                        </tr>
-                        <tr>
-                            <td>Responsibilities</td>
-                            <td>1. to develop operational systems in accordance with Shoprite Standards<br />                            
-                            -Understand the existing requirement and document the requirements<br />
-                            -Develop .Net programs and functions.<br />
-                            -Confirm with requirements with Systems Analyst<br />
-                            -Do unit testing of developed programs and functions<br />
-                            -Code reviews with peers<br /><br />
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-                            2. to maintain operational systems in accordance with Shoprite Standards<br />
-                            -Maintain existing Net programs/systems and functions<br />
-                            -Document changes<br />
-                            -Confirm requirements with Systems Analyst<br />
-                            -Do unit testing of developed programs and functions<br />
-                            -Code reviews with peers<br /><br />
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    }
+}
 
-                            3. to manage the release process<br />
-                            -Capture the release using the Shoprite release management system.<br />
-                            -Ensure instructions are clear and concise and applied by relevant deployment teams<br />
-                            -Confirm the success of the deployment and follow through until production stage is reached<br /><br />
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
 
-                            4. To provide support to users of the systems.<br />
-                            -Provide business support on existing systems<br />
-                            - Supporting and Co-operating<br />
-                            -Working with People<br />
-                            - Adhering to Principles and Values<br /></td>
-                        </tr>
-                        <tr><td>Development Tools</td><td>C# .NET(Visual Studio 2022), ASP.NET Core RazorPages ,ASP.NET WebForms, Entity Framework,Javascript,HTML5,CSS, ASP.NET Core Web API ,MS SQL SERVER (2018), SSIS Packages, Git, Jira, Azure DevOps</td></tr>
-                    </table>
-                </div>
+@keyframes blink {
+    0%, 50% {
+        border-color: transparent;
+    }
+    51%, 100% {
+        border-color: #667eea;
+    }
+}
 
-                <div class="experience-item">
-                    <h3>DMC Debt Management</h3>
-                    <h4>Programmer</h4>
-                    <div class="date">November 2017 - September 2019</div>
-                    <p><strong><i>Breakdown of Roles played at DMC Debt Management:</i></strong></p>
-                    <table>
-                        <tr><td><strong>Division</strong></td>
-                            <td>Group DMC</td>
-                        </tr>
-                        <tr><td>Responsibilities</td>
-                            <td>Function Requirements Gathering<br />
-                                Technical Design - Designing and planning new systems<br />
-                                Understanding and communicating the system requirements to Team Members<br />
-                                Estimate Development Time and Report on project progress<br />
-                                Meet Milestones<br />
-                                Encoding of requirements from the technical design<br />
-                                Performing code reviews<br />
-                                Understand the business problem and provide solutions<br />
-                                Resolving of bugs in existing software<br />
-                                Fault finding and testing<br />
-                                Modifying of existing stored procedures<br />
-                                Database development<br />
-                                Development of additional features to be added to existing software<br />
-                                Front end development<br />
-                                Service Layer Development<br />
-                                Unit Test Development<br />
-                                Windows Service development<br />
-                                Obtaining feedback from users<br />
-                                Writing of documentation<br />
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Development Tools</td>
-                            <td>C# .NET(Visual Studio 2017), ASP.NET MVC5 , Entity Framework,Javascript,HTML5,CSS, WCF services,  ASP.NET Web API ,MS SQL SERVER (2016), SSIS Packages, SSRS,TFS, Source Control</td>
-                        </tr>
-                    </table>
-                </div>
+/* Dark theme variables */
+:root {
+    --bg-color: #f4f4f4;
+    --container-bg: white;
+    --text-color: #333;
+    --header-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --section-bg: #f8f9fa;
+    --border-color: #eee;
+    --table-border: #ddd;
+    --shadow: rgba(0,0,0,0.1);
+}
 
-                <div class="experience-item">
-                    <h3>DMC Debt Management</h3>
-                    <h4>Data Analyst</h4>
-                    <div class="date">July 2014 - November 2017</div>
-                    <p><strong><i>Breakdown of Roles played at DMC Debt Management:</i></strong></p>
-                    <table>
-                        <tr>
-                            <td>Division</td>
-                            <td>Data Analyst</td>
-                        </tr>
-                        <tr>
-                            <td>Responsibilites</td>
-                            <td>
-                                Understanding system requirements<br />
-                            
-                                Understand data structures within the system in order to provide meaningful representations of the data.<br />
-                                Data manipulation and reconciling<br />
-                                Develop reports using SQL, Excel, Cubes,  Reporting Services and the like<br />
-                                Write optimised SQL queries<br />	
-                                Write database packages (SSIS and the like)<br />
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #e0e0e0;
+    --header-gradient: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    --section-bg: #3a3a3a;
+    --border-color: #4a4a4a;
+    --table-border: #555;
+    --shadow: rgba(0,0,0,0.3);
+}
 
-                                To implement controls, procedures and reports as and when requested by Management. This includes:<br /><br />
+/* Hamburger Menu */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
 
-                                Daily, Weekly and Monthly Reporting<br />
-                                To Promote Continuous Improvements in the IT & Operational systems<br />
-                                Ensure synchronisation and alignment of data within operational systems<br />
-                                Continuous analysis of business processes and operational systems for possible enhancements and improvements<br /><br />
-                                Eliminate data quality deficiencies, system errors and the misalignment of operations & systems<br />  
-                                Provide IT support for operational systems data and performance analysis<br />
-                                
-                                Writing Documentation
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Development Tools</td>
-                            <td>SSIS, SQL</td>
-                        </tr>
-                        <tr>
-                            <td>Reason for leaving</td>
-                            <td>I wanted to learn and grow as a software developer as I’m passionate about programming</td>
-                        </tr>
-                    </table>
-                </div>
+.hamburger-btn {
+    background: rgba(102, 126, 234, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
 
-                <div class="experience-item">
-                    <h3>Real People</h3>
-                    <h4>Programmer</h4>
-                    <div class="date">January 2013 - July 2014</div>
-                    <p><strong><i>Breakdown of Roles played at Real People:</i></strong></p>
-                    <table>
-                        <tr>
-                            <td><strong>Division</strong></td>
-                            <td>Cellular</td>
-                        </tr>
-                        <tr>
-                            <td>Responsibilities</td>
-                            <td>
-                                Function Requirements Gathering<br />
-                                Technical Design - Designing and planning new systems<br />
-                                Understanding and communicating the system requirements to Team Members<br />
-                                Estimate Development Time and Report on project progress<br />
-                                Meet Milestones<br />
-                                Encoding of requirements from the technical design<br />
-                                Performing code reviews<br />
-                                Understand the business problem and provide solutions<br />
-                                Resolving of bugs in existing software<br />
-                                Fault finding and testing<br />
-                                Modifying of existing stored procedures<br />
-                                Database development<br />
-                                Development of additional features to be added to existing software<br />
-                                Front end development<br />
-                                Service Layer Development<br />
-                                Unit Test Development<br />
-                                Windows Service development<br />
-                                Obtaining feedback from users<br />
-                                Writing of documentation<br />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Development Tools</td>
-                            <td>C# (Visual Studio 2008 - 2012), ASP.NET WebForms, Windows Forms, SQL SERVER (2008 - 2012), SSIS Packages (2008, 2011),  MySQL, TFS, Source Control</td>
-                        </tr>
-                        <tr>
-                            <td>Reason for leaving</td>
-                            <td>Retrenched  as company was not profit generating</td>
-                        </tr>
-                    </table>
-                </div>                <div class="experience-item">
-                    <h3>Nelson Mandela Metropolitan University</h3>
-                    <h4>Student Assistant - Administrative Support</h4>
-                    <div class="date">January 2010 - March 2010</div>
-                    <table>
-                        <tr>
-                            <td>Responsibilities</td>
-                            <td>Data Capturing<br>Queue Management and Control</td>
-                        </tr>
-                        <tr>
-                            <td>Reason for leaving</td>
-                            <td>Contract expired</td>
-                        </tr>
-                    </table>
-                </div>
+.hamburger-btn:hover {
+    background: rgba(102, 126, 234, 1);
+    transform: scale(1.1);
+}
 
-                <div class="experience-item">
-                    <h3>Nelson Mandela Metropolitan University</h3>
-                    <h4>Student Assistant - Academic Support</h4>
-                    <div class="date">January 2009 - December 2009</div>
-                    <table>
-                        <tr>
-                            <td>Responsibilities</td>
-                            <td>Assisting in marking student assignments and examinations</td>
-                        </tr>
-                        <tr>
-                            <td>Reason for leaving</td>
-                            <td>Contract expired</td>
-                        </tr>
-                    </table>
-                </div>                <div class="experience-item">
-                    <h3>McDonald's</h3>
-                    <h4>General Worker</h4>
-                    <div class="date">June 2007 - January 2008</div>
-                    <table>
-                        <tr>
-                            <td>Responsibilities</td>
-                            <td>Customer service, food preparation, maintaining cleanliness standards</td>
-                        </tr>
-                        <tr>
-                            <td>Achievement</td>
-                            <td>Crew Member of the Month - August 2007</td>
-                        </tr>
-                        <tr>
-                            <td>Reason for leaving</td>
-                            <td>To complete studies without distractions and focus on academic excellence</td>
-                        </tr>
-                    </table>
-                </div>
-            </div> 
-            <div class="section">
-                <h2>AWARDS AND ARCHIEVEMENTS</h2>
-                    <ul>
-                        <li>Promotion from Programmer II to Programmer III</li>
-                        <li>QA(Quality Assurance) Script and SSIS reviews at DMC</li>
-                        <li>1st place at the Imagine Cup Competition 2010 in the category of Development</li> 
-                        <li>Student Merit Award in the Project for the year 2010</li>
-                        <li>Social Awareness Award  in the Project for the year 2010</li> 
-                        <li>Student Merit Bursary Award for 2008 performance.</li>
-                        <li>Crew Member of the Month, August 2007, McDonald’s.</li>
-                    </ul>
-            </div>            <div class="section">
-                <h2>Professional Development & Certifications</h2>
-                <ul>
-                    <li><strong>The Complete Full-Stack Web Development Bootcamp</strong> - Comprehensive Training</li>
-                    <li><strong>Bootstrap 5 Course</strong> - The Complete Guide Step by Step (2024)</li>
-                    <li><strong>The Complete JavaScript Course 2021</strong> - From Zero to Expert (Udemy)</li>
-                    <li><strong>GitHub Copilot</strong> - Use AI to Write Code for You! (Copilot 2024)</li>
-                    <li>Certificate in IT essentials: PC hardware and software.</li>
-                </ul>
-            </div>            <div class="section">
-                <h2>COMPUTER EXPERIENCE</h2>
-                <H4>Knowledge of and experience in the following</H4>
-                <div class="skills-grid">
-                    <div class="skill-item">C#.NET</div>
-                    <div class="skill-item">ASP.NET MVC</div>
-                    <div class="skill-item">ASP.NET WebForms</div>
-                    <div class="skill-item">Windows Forms</div>
-                    <div class="skill-item">ASP.NET Web API</div>
-                    <div class="skill-item">Entity Framework</div>
-                    <div class="skill-item">Javascript</div>
-                    <div class="skill-item">HTML5</div>
-                    <div class="skill-item">CSS3</div>
-                    <div class="skill-item">Bootstrap</div>
-                    <div class="skill-item">WCF</div>
-                    <div class="skill-item">SSIS</div>
-                    <div class="skill-item">SSRS</div>
-                    <div class="skill-item">ASP.NET version 4.0</div>
-                    <div class="skill-item">ASP.NET Core</div>
-                    <div class="skill-item">SQL Server 2018</div>
-                    <div class="skill-item">Git</div>
-                    <div class="skill-item">Azure DevOps</div>
-                    <div class="skill-item">Jira</div>
-                    <div class="skill-item">TFS</div>
-                    <div class="skill-item">Source Controls</div>
-                    <div class="skill-item">E-Mail</div>
-                    <div class="skill-item">Internet Explorer</div>
-                    <div class="skill-item">Microsoft Access</div>
-                    <div class="skill-item">Microsoft Excel</div>
-                    <div class="skill-item">Microsoft Word</div>
-                    <div class="skill-item">Microsoft PowerPoint</div>
-                    <div class="skill-item">Microsoft Windows</div>
-                    <div class="skill-item">Visual Studio .NET 2022</div>
-                </div>
-            </div>
+.hamburger-btn span {
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 2px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
 
-            <div class="section">
-                <h2>Key Attributes</h2>
-                <ul>
-                    <li><strong>Logical and systematic approach</strong> to problem-solving</li>
-                    <li><strong>Ability to work under pressure</strong> and meet tight deadlines</li>
-                    <li><strong>Hard worker</strong> with strong dedication to quality</li>
-                    <li><strong>Excellent time management skills</strong> and organizational abilities</li>
-                    <li><strong>Responsive</strong> to changing requirements and feedback</li>
-                    <li><strong>Initiative</strong> in proposing improvements and solutions</li>
-                </ul>
-            </div>            <div class="section">
-                <h2>References</h2>
-                
-                <div class="reference-item">
-                    <h3>Dr Nicky Mostert – Phipps</h3>
-                    <p class="reference-title">Lecturer at NMMU</p>
-                    <p class="reference-contact">041 504 9101</p>
-                </div>
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
 
-                <div class="reference-item">
-                    <h3>Mr Tremaine Underwood</h3>
-                    <p class="reference-title">Senior Analyst Programmer at <span class="company-highlight">DMC Debt</span> Management</p>
-                    <p class="reference-contact">079 223 2795</p>
-                    <p class="reference-contact">043 702 4600 (ext 4417)</p>
-                </div>
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
 
-                <div class="reference-item">
-                    <h3>Mr Jarrod Moura</h3>
-                    <p class="reference-title">Software Developer at <span class="company-highlight">DigiOutsource</span></p>
-                    <p class="reference-contact">072 850 1121</p>
-                </div>
-            </div>
-            <button class="btn invisible"></button>
-        </div>       
-       
-    </body>
-</html>
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
 
+.menu-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px var(--shadow);
+    padding: 20px;
+    min-width: 250px;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.menu-dropdown.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: var(--section-bg);
+}
+
+.theme-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.theme-toggle {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:checked + .slider {
+    background-color: #667eea;
+}
+
+.theme-toggle:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.print-btn, .download-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.print-btn:hover, .download-btn:hover {
+    background: #5a6fd8;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 10px;
+    margin: 0;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    box-shadow: 0 0 20px var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: slideDown 1s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 30px var(--shadow);
+}
+
+.header {
+    background: var(--header-gradient);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    animation: fadeInUp 1.2s ease;
+}
+
+.header img {
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: block;
+    transition: all 10s ease;
+    animation: bounceIn 5s ease;
+}
+
+.header img:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+.header-intro{
+    margin-bottom:20px;
+}
+
+.header h1 {
+    margin: 15px 0 5px 0;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    animation: fadeInRight 1.8s ease;
+    transition: all 0.3s ease;
+}
+
+.header h1:hover {
+    transform: scale(1.02);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+    animation: fadeInLeft 2s ease;
+    transition: all 0.3s ease;
+}
+
+.header p:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 25px 30px;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+    animation-fill-mode: both;
+}
+
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.4s; }
+.section:nth-child(4) { animation-delay: 0.6s; }
+.section:nth-child(5) { animation-delay: 0.8s; }
+.section:nth-child(6) { animation-delay: 1.0s; }
+.section:nth-child(7) { animation-delay: 1.2s; }
+.section:nth-child(8) { animation-delay: 1.4s; }
+
+.section:hover {
+    background-color: var(--section-bg);
+    transform: translateX(5px);
+    border-left: 4px solid #667eea;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.summary {
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-left: 4px solid #667eea;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.contact-item strong {
+    min-width: 80px;
+    color: #667eea;
+    margin-right: 10px;
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+.contact-item span {
+    color: var(--text-color);
+    word-break: break-word;
+    flex: 1;
+}
+
+/* Specific styling for email to make it more readable */
+.contact-item:first-child span {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 12px 8px;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+}
+
+td:first-child {
+    font-weight: bold;
+    width: 180px;
+    color: #667eea;
+    white-space: nowrap;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    page-break-inside: avoid;
+    transition: all 0.3s ease;
+    animation: fadeInLeft 0.8s ease;
+    animation-fill-mode: both;
+}
+
+.experience-item:hover, .education-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px var(--shadow);
+    border-left-width: 6px;
+    background-color: rgba(102, 126, 234, 0.05);
+}
+
+.experience-item h3, .education-item h3 {
+    color: #667eea;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.experience-item h4, .education-item h4 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.experience-item table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.experience-item table td {
+    padding: 8px 12px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--table-border);
+    font-size: 0.9rem;
+}
+
+.experience-item table td:first-child {
+    font-weight: bold;
+    width: 150px;
+    color: #667eea;
+    white-space: nowrap;
+}
+
+.date {
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.skill-item {
+    background-color: #667eea;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 20s ease;
+    animation: bounceIn 5s ease;
+    animation-fill-mode: both;
+    cursor: pointer;
+}
+
+.skill-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2) { animation-delay: 0.2s; }
+.skill-item:nth-child(3) { animation-delay: 0.3s; }
+.skill-item:nth-child(4) { animation-delay: 0.4s; }
+.skill-item:nth-child(5) { animation-delay: 0.5s; }
+.skill-item:nth-child(6) { animation-delay: 0.6s; }
+.skill-item:nth-child(7) { animation-delay: 0.7s; }
+.skill-item:nth-child(8) { animation-delay: 0.8s; }
+.skill-item:nth-child(9) { animation-delay: 0.9s; }
+.skill-item:nth-child(10) { animation-delay: 1.0s; }
+.skill-item:nth-child(11) { animation-delay: 1.1s; }
+.skill-item:nth-child(12) { animation-delay: 1.2s; }
+
+.skill-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #5a6fd8;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    animation: glow 2s infinite;
+}
+
+hr {
+    display: none;
+}
+
+/* Awards and Achievements Styling */
+.section ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    position: relative;
+}
+
+.section ul li::marker {
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Course completion styling */
+.section h2 u {
+    text-decoration: underline;
+    text-decoration-color: #667eea;
+    text-underline-offset: 3px;
+}
+
+/* Improve readability for long content */
+.section p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/* Better table styling for work experience */
+.experience-item table tr:last-child td {
+    border-bottom: none;
+}
+
+.experience-item table tr:hover {
+    background-color: rgba(102, 126, 234, 0.05);
+}
+
+/* Compact spacing for better content flow */
+.section h2 {
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+}
+
+/* Print-friendly styles */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: none;
+    }
+    
+    .header {
+        background: #667eea !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .section {
+        padding: 15px 20px;
+        page-break-inside: avoid;
+    }
+    
+    .experience-item, .education-item {
+        page-break-inside: avoid;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+    
+    /* Hide hamburger menu and any interactive elements in print */
+    .hamburger-menu {
+        display: none !important;
+    }
+    
+    .print-btn, .download-btn {
+        display: none !important;
+    }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet landscape and small desktop */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        margin: 10px auto;
+    }
+    
+    .section {
+        padding: 20px 25px;
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 8px;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    
+    .container {
+        margin: 5px auto;
+        border-radius: 8px;
+        max-width: 100%;
+    }
+    
+    .header {
+        padding: 20px 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .awards-header {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .awards-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .awards-header ul li {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .header img {
+        width: 120px;
+        height: 120px;
+        border: 3px solid white;
+    }
+    
+    .section {
+        padding: 15px 20px;
+    }
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .contact-item {
+        padding: 12px;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .contact-item strong {
+        min-width: 70px;
+        margin-right: 8px;
+    }
+    
+    .contact-item strong {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 8px;
+    }
+    
+    .skill-item {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    h4 {
+        font-size: 0.95rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    td {
+        padding: 8px 6px;
+    }
+    
+    td:first-child {
+        width: 100px;
+        font-size: 0.85rem;
+        white-space: normal;
+    }
+    
+    .experience-item, .education-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .experience-item table td {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .experience-item table td:first-child {
+        width: 100px;
+        white-space: normal;
+    }
+}
+
+/* Mobile landscape */
+@media (max-width: 640px) {
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .awards-header {
+        padding: 10px;
+    }
+    
+    .awards-header ul li {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .skill-item {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .experience-item table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .experience-item table td {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+        max-width: 200px;
+        margin-right: 10px;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    body {
+        padding: 2px;
+    }
+    
+    .container {
+        border-radius: 5px;
+        margin: 2px auto;
+    }
+    
+    .header {
+        padding: 15px 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+        margin: 10px 0 5px 0;
+    }
+    
+    .header p {
+        font-size: 0.9rem;
+    }
+    
+    .awards-header {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .awards-header h2 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .awards-header ul li {
+        font-size: 0.7rem;
+        margin-bottom: 4px;
+        padding: 3px 0;
+    }
+    
+    .header img {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+    }
+    
+    .section {
+        padding: 12px 15px;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .summary {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .contact-item {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 6px;
+    }
+    
+    .skill-item {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+        border-radius: 15px;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    td {
+        padding: 6px 4px;
+    }
+    
+    td:first-child {
+        width: 80px;
+        font-size: 0.8rem;
+    }
+    
+    .experience-item, .education-item {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .experience-item h3, .education-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .experience-item h4, .education-item h4 {
+        font-size: 0.9rem;
+    }
+    
+    .date {
+        font-size: 0.85rem;
+    }
+    
+    .experience-item table {
+        font-size: 0.8rem;
+    }
+    
+    .experience-item table td {
+        padding: 5px 6px;
+        font-size: 0.8rem;
+    }
+    
+    .experience-item table td:first-child {
+        width: 70px;
+        font-size: 0.75rem;
+    }
+    
+    .section ul li {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .awards-header ul li {
+        font-size: 0.65rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+    
+    .skill-item {
+        padding: 4px 6px;
+        font-size: 0.75rem;
+    }
+    
+    td:first-child {
+        width: 70px;
+        font-size: 0.75rem;
+    }
+    
+    .experience-item table td:first-child {
+        width: 60px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (max-width: 768px) {
+    /* Make clickable elements larger */
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve text readability */
+    body {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* Better touch scrolling */
+    .container {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Prevent horizontal scroll */
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    /* Better table handling on mobile */
+    .experience-item table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .experience-item table tr {
+        display: block;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .experience-item table tr:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .experience-item table td {
+        display: block;
+        border-bottom: none;
+        padding: 3px 0;
+    }
+    
+    .experience-item table td:first-child {
+        font-weight: bold;
+        color: #667eea;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .header img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .awards-header {
+        padding: 8px;
+    }
+    
+    .awards-header ul li {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+    }
+}
+
+.btn {
+    display: none;
+}
+
+.invisible {
+    display: none;
+}
+
+/* Awards header styling */
+.awards-header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.awards-header h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+}
+
+.awards-header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.awards-header ul li {
+    margin-bottom: 6px;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.3;
+    text-align: left;
+}
+
+.awards-header ul li:last-child {
+    border-bottom: none;
+}
+
+.awards-header ul li strong {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* References Section Styling */
+.reference-item {
+    margin-bottom: 25px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.reference-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.reference-item h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reference-title {
+    color: var(--text-color);
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.reference-contact {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.company-highlight {
+    text-decoration: underline;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for references */
+@media (max-width: 768px) {
+    .reference-item {
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+    
+    .reference-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .reference-title {
+        font-size: 0.95rem;
+    }
+    
+    .reference-contact {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional dark theme improvements */
+[data-theme="dark"] h4 {
+    color: #e0e0e0 !important;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .experience-item h4,
+[data-theme="dark"] .education-item h4 {
+    color: #e0e0e0 !important;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .date {
+    color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .reference-item h3 {
+    color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .reference-title {
+    color: #c0c0c0 !important;
+}
+
+[data-theme="dark"] .reference-contact {
+    color: #a0a0a0 !important;
+}
