@@ -193,8 +193,30 @@ function downloadPDF() {
             alert('PDF setup failed. Please try using the Print CV button instead.');
         }
     }, 300); // Small delay to show initial progress
-    
-    function triggerPDFDownload() {
+      function triggerPDFDownload() {
+        // Add event listeners to detect when print dialog closes
+        const beforePrint = () => {
+            console.log('Print dialog opened');
+        };
+        
+        const afterPrint = () => {
+            console.log('Print dialog closed');
+            // Clean up after print dialog closes
+            setTimeout(() => {
+                cleanupPrintStyles();
+            }, 500);
+        };
+        
+        // Add event listeners
+        window.addEventListener('beforeprint', beforePrint);
+        window.addEventListener('afterprint', afterPrint);
+        
+        // Clean up event listeners after some time
+        setTimeout(() => {
+            window.removeEventListener('beforeprint', beforePrint);
+            window.removeEventListener('afterprint', afterPrint);
+        }, 30000); // Remove after 30 seconds
+        
         // Try modern approach first
         if (window.navigator && window.navigator.userAgent) {
             const isChrome = window.navigator.userAgent.includes('Chrome');
@@ -225,19 +247,35 @@ function downloadPDF() {
         // Fallback to standard print
         window.print();
     }
-    
-    function cleanupPrintStyles() {
+      function cleanupPrintStyles() {
         // Remove temporary print styles
         const tempStyle = document.getElementById('temp-print-style');
         if (tempStyle) {
             tempStyle.remove();
         }
         
-        // Restore original theme and hamburger menu
-        document.documentElement.setAttribute('data-theme', originalTheme);
-        if (hamburgerMenu) {
-            hamburgerMenu.style.display = 'block';
+        // Restore original theme
+        if (originalTheme) {
+            document.documentElement.setAttribute('data-theme', originalTheme);
         }
+        
+        // Restore hamburger menu - be more robust
+        const hamburgerMenuElement = hamburgerMenu || document.querySelector('.hamburger-menu');
+        if (hamburgerMenuElement) {
+            hamburgerMenuElement.style.display = 'block';
+            hamburgerMenuElement.style.visibility = 'visible';
+            hamburgerMenuElement.style.opacity = '1';
+        }
+        
+        // Also make sure the hamburger menu container is visible
+        const allHamburgerElements = document.querySelectorAll('.hamburger-menu, .hamburger-btn, .menu-dropdown');
+        allHamburgerElements.forEach(element => {
+            element.style.display = '';
+            element.style.visibility = '';
+            element.style.opacity = '';
+        });
+        
+        console.log('Print styles cleaned up and hamburger menu restored');
     }
     
     function createInstructionsModal() {
@@ -470,6 +508,22 @@ function closeHamburgerMenu() {
 function printCV() {
     closeHamburgerMenu();
     
+    // Add print event listeners to ensure hamburger menu stays visible
+    const afterPrintHandler = () => {
+        // Ensure hamburger menu is visible after printing
+        const hamburgerMenuElement = document.querySelector('.hamburger-menu');
+        if (hamburgerMenuElement) {
+            hamburgerMenuElement.style.display = 'block';
+            hamburgerMenuElement.style.visibility = 'visible';
+            hamburgerMenuElement.style.opacity = '1';
+        }
+        
+        // Remove the event listener
+        window.removeEventListener('afterprint', afterPrintHandler);
+    };
+    
+    window.addEventListener('afterprint', afterPrintHandler);
+    
     // Small delay to ensure menu is closed before printing
     setTimeout(() => {
         window.print();
@@ -488,4 +542,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', downloadPDF);
     }
+    
+    // Safety check: Ensure hamburger menu is always visible when page regains focus
+    window.addEventListener('focus', function() {
+        ensureHamburgerMenuVisible();
+    });
+    
+    // Also check periodically (every 2 seconds) to ensure menu stays visible
+    setInterval(ensureHamburgerMenuVisible, 2000);
 });
+
+// Function to ensure hamburger menu is always visible
+function ensureHamburgerMenuVisible() {
+    const hamburgerMenuElement = document.querySelector('.hamburger-menu');
+    if (hamburgerMenuElement) {
+        const computedStyle = window.getComputedStyle(hamburgerMenuElement);
+        if (computedStyle.display === 'none' || 
+            computedStyle.visibility === 'hidden' || 
+            computedStyle.opacity === '0') {
+            
+            hamburgerMenuElement.style.display = 'block';
+            hamburgerMenuElement.style.visibility = 'visible';
+            hamburgerMenuElement.style.opacity = '1';
+            console.log('Hamburger menu restored to visible state');
+        }
+    }
+}
