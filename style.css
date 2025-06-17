@@ -310,7 +310,7 @@ body {
 
 .header img {
     border-radius: 50%;
-    border: 5px solid white;
+    border: 3px solid white;
     margin: 15px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: block;
@@ -322,6 +322,10 @@ body {
     transform: scale(1.05) rotate(5deg);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     animation: pulse 2s infinite;
+}
+
+.intro{
+    margin-bottom:20px;
 }
 
 .header h1 {
