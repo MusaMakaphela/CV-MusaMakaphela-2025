@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Musa Makaphela - Software Developer Resume</title>
         <link rel="stylesheet" href="./style.css">
+        <script defer src="index.js"></script>
     </head>
     <body>
         <!-- Hamburger Menu -->
@@ -214,11 +215,6 @@
                         </tr>
                         <tr><td>Development Tools</td><td>C# .NET(Visual Studio 2022), ASP.NET Core RazorPages ,ASP.NET WebForms, Entity Framework,Javascript,HTML5,CSS, ASP.NET Core Web API ,MS SQL SERVER (2018), SSIS Packages, Git, Jira, Azure DevOps</td></tr>
                     </table>
-                    <!--<ul>
-                        <li>Developed and maintained web applications using modern technologies</li>
-                        <li>Collaborated with cross-functional teams to deliver quality software solutions</li>
-                        <li>Participated in agile development processes</li>
-                    </ul>-->
                 </div>
 
                 <div class="experience-item">
@@ -258,10 +254,6 @@
                             <td>C# .NET(Visual Studio 2017), ASP.NET MVC5 , Entity Framework,Javascript,HTML5,CSS, WCF services,  ASP.NET Web API ,MS SQL SERVER (2016), SSIS Packages, SSRS,TFS, Source Control</td>
                         </tr>
                     </table>
-                   <!-- <ul>
-                        <li>Designed and implemented software solutions for debt management systems</li>
-                        <li>Optimized application performance and database queries</li>
-                    </ul>-->
                 </div>
 
                 <div class="experience-item">
@@ -490,78 +482,8 @@
                 </div>
             </div>
             <button class="btn invisible"></button>
-        </div>       <script>
-          // Hamburger menu functionality
-          document.addEventListener('DOMContentLoaded', function() {
-              const hamburgerBtn = document.getElementById('hamburgerBtn');
-              const menuDropdown = document.getElementById('menuDropdown');
-              const themeToggle = document.getElementById('themeToggle');
-              
-              // Check for saved theme preference or default to light
-              const currentTheme = localStorage.getItem('theme') || 'light';
-              document.documentElement.setAttribute('data-theme', currentTheme);
-              
-              if (currentTheme === 'dark') {
-                  themeToggle.checked = true;
-              }
-              
-              // Hamburger menu toggle
-              hamburgerBtn.addEventListener('click', function() {
-                  hamburgerBtn.classList.toggle('active');
-                  menuDropdown.classList.toggle('active');
-              });
-              
-              // Close menu when clicking outside
-              document.addEventListener('click', function(event) {
-                  if (!hamburgerBtn.contains(event.target) && !menuDropdown.contains(event.target)) {
-                      hamburgerBtn.classList.remove('active');
-                      menuDropdown.classList.remove('active');
-                  }
-              });
-              
-              // Theme toggle functionality
-              themeToggle.addEventListener('change', function() {
-                  if (this.checked) {
-                      document.documentElement.setAttribute('data-theme', 'dark');
-                      localStorage.setItem('theme', 'dark');
-                  } else {
-                      document.documentElement.setAttribute('data-theme', 'light');
-                      localStorage.setItem('theme', 'light');
-                  }
-              });
-              
-              console.log('Resume loaded successfully with theme support');
-          });
-            // PDF download functionality (placeholder)
-          function downloadPDF() {
-              // Close hamburger menu before printing
-              closeHamburgerMenu();
-              
-              // For now, this will just print the page
-              // In a real implementation, you could use libraries like jsPDF or html2pdf
-              alert('PDF download feature coming soon! For now, use Print and save as PDF.');
-              window.print();
-          }
-          
-          // Function to close hamburger menu
-          function closeHamburgerMenu() {
-              const hamburgerBtn = document.getElementById('hamburgerBtn');
-              const menuDropdown = document.getElementById('menuDropdown');
-              
-              hamburgerBtn.classList.remove('active');
-              menuDropdown.classList.remove('active');
-          }
-          
-          // Custom print function that handles theme and menu closing
-          function printCV() {
-              closeHamburgerMenu();
-              
-              // Small delay to ensure menu is closed before printing
-              setTimeout(() => {
-                  window.print();
-              }, 100);
-          }
-       </script>
+        </div>       
+       
     </body>
 </html>
 
