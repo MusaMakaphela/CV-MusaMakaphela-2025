@@ -549,8 +549,8 @@ td:first-child {
     border-radius: 20px;
     text-align: center;
     font-weight: 500;
-    transition: all 0.3s ease;
-    animation: bounceIn 0.6s ease;
+    transition: all 20s ease;
+    animation: bounceIn 5s ease;
     animation-fill-mode: both;
     cursor: pointer;
 }
