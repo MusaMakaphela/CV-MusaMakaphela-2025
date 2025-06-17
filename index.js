@@ -41,6 +41,8 @@
         console.log('Resume loaded successfully with theme support');
     });
 
+    const downloadPdfBtn = document.querySelector('.download-btn');
+    downloadPdfBtn.addEventListener('click',downloadPDF);
       // PDF download functionality (placeholder)
     function downloadPDF() {
         // Close hamburger menu before printing
@@ -61,6 +63,9 @@
         menuDropdown.classList.remove('active');
     }
     
+    const printDocBtn = document.querySelector('.print-btn')
+
+    printDocBtn.addEventListener('click', printCV);
     // Custom print function that handles theme and menu closing
     function printCV() {
         closeHamburgerMenu();
